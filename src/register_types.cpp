@@ -1,6 +1,9 @@
 #include "register_types.h"
 
-#include "gdscenesprite.h"
+#include "Player.hpp"
+#include "Mob.hpp"
+#include "Main.hpp"
+#include "HUD.hpp"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
@@ -14,7 +17,10 @@ void initialize_scenesprite_module(ModuleInitializationLevel p_level) {
 		return;
 	}
 
-	ClassDB::register_class<GDSceneSprite>();
+	ClassDB::register_class<Player>();
+	ClassDB::register_class<Mob>();
+	ClassDB::register_class<Main>();
+	ClassDB::register_class<HUD>();
 }
 
 void uninitialize_scenesprite_module(ModuleInitializationLevel p_level) {

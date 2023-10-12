@@ -1,23 +1,41 @@
-<H3>Requirements:</H3>
-<p>1. Install <b>Python</b>, version 3.6 or higher (https://www.python.org/downloads/)<BR>
-Attention!!! During the Python installation process, you need to set the "Add to PATH" flag.<BR></p>
-<p>2. Install <b>scons</b> (https://scons.org/doc/production/HTML/scons-man.html)<BR>
-<i>pip install scons</i><BR></p>
- 
-<H3>To work with this template</H3>
-1. Clone repository<BR>
-<i>git clone https://github.com/pollstar/godot-vs-template.git<BR>
-cd  godot-vs-template<BR>
-cd godot-cpp<BR>
-git submodule update --init<BR>
-scons platform=windows generate_bindings=yes target=template_release<BR>
-scons platform=windows generate_bindings=yes target=template_debug<BR>
-cd ..<BR></i>
-2. Unzip Godot_v4.1.2-stable_win64.exe to <b>godot</b> directory <BR>
-3. Star VS, and open <b>sln</b> file<BR>
-4. Build project<BR>
-5. Start project from VS<BR>
-6. Select <b>gd_scene_sprite.tscn</b> from FileSystem in Godot<BR>
-<BR>
+# Dodge the Creeps with GDExtention C++ (Visual Studio, Godot 4.1)
 
-<BR><b>TYPED_METHOD_BIND</b> need add to preprocessor in VS, for binding your property
+This is an adaptation for GDExtention and C++, a completed version of the game presented in the textbook for the documentation
+["Your first 2D game"](https://docs.godotengine.org/en/latest/getting_started/first_2d_game/index.html).
+
+The project was developed in Visual Studio for Windows platform only.
+
+## Screenshots
+
+![GIF](/screenshots/video.gif)
+![sh1](/screenshots/Screenshot%202023-10-14%20152827.png)
+![sh2](/screenshots/Screenshot%202023-10-14%20152915.png)
+
+## Requirements
+1. Install **Python**, version 3.6 or higher (https://www.python.org/downloads/)
+
+*Attention!!! During the Python installation process, you need to set the "Add to PATH" flag.*
+
+2. Install **scons** (https://scons.org/doc/production/HTML/scons-man.html)
+```
+pip install scons
+```
+
+## Build
+1. Clone repository
+```
+git clone https://github.com/pollstar/dodge_the_creeps_2d.git
+cd dodge_the_creeps_2d
+cd godot-cpp
+git submodule update --init
+scons platform=windows generate_bindings=yes target=template_release
+scons platform=windows generate_bindings=yes target=template_debug
+cd ..
+```
+2. Download and unzip Godot_v4.1.2-stable_win64.exe to **godot** directory
+
+3. Star VS, and open **sln** file
+
+4. Build project
+
+5. Start project from VS

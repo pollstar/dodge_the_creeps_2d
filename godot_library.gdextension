@@ -1,0 +1,9 @@
+[configuration]
+
+entry_symbol = "scenesprite_library_init"
+compatibility_minimum = 4.1
+
+[libraries]
+
+windows.debug.x86_64 = "res://bin/x64/Debug/godot_library.dll"
+windows.release.x86_64 = "res://bin/x64/Release/godot_library.dll"
